@@ -171,7 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         onPressed: () {
           signUp(emailEditingController.text, passwordEditingController.text);
         },
-        child: Text(
+        child: const Text(
           "Sign Up",
           textAlign: TextAlign.center,
           style: TextStyle(

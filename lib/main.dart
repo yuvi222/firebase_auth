@@ -1,3 +1,6 @@
+import 'package:auth_app/screens/analytics.dart';
+import 'package:auth_app/screens/dashboard.dart';
+import 'package:auth_app/screens/featured.dart';
 import 'package:auth_app/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -15,11 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Email And Password Login',
+      title: 'Auth_App',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const LoginScreen(),
+      home: const Analytics(),
     );
   }
 }
