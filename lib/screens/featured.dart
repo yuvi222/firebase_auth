@@ -64,60 +64,46 @@ class _FeaturedState extends State<Featured> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.7),
-                          //spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: Offset(0.0, 5.0),
-                        ),
-                      ]),
-                  height: 60,
-                  width: 210,
-                  child: Card(
-                    color: Colors.white60,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: const [
-                          Text("Search...."),
-                          Padding(
-                            padding: EdgeInsets.only(left: 100),
-                            child: Icon(Icons.search),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.7),
+                            //spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0.0, 5.0),
                           ),
-                        ],
+                        ]),
+                    height: 60,
+                    width: MediaQuery.of(context).size.width / 1.70,
+                    child: Card(
+                      color: Colors.white60,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: const [
+                            Text("Search...."),
+                            Padding(
+                              padding: EdgeInsets.only(left: 100),
+                              child: Icon(Icons.search),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  height: 60,
-                  width: 60,
-                  child: Card(
-                    elevation: 10,
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Image.asset(
-                      'icon/wrapper.png',
-                    ),
-                  ),
-                ),
-                InkWell(
-                  child: Container(
+                  Container(
                     height: 60,
                     width: 60,
                     child: Card(
@@ -126,137 +112,153 @@ class _FeaturedState extends State<Featured> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(Icons.add),
-                    ),
-                  ),
-                  onTap: () {
-                    showDialogFunc(context, titletext);
-                  },
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 50, 8.0, 8.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.7),
-                          //spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: Offset(0.0, 5.0),
-                        ),
-                      ]),
-                  height: 60,
-                  width: 330,
-                  child: Card(
-                    //elevation: 10,
-                    color: Colors.white60,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: const [
-                          Text("Dresses"),
-                          Padding(
-                            padding: EdgeInsets.only(left: 220),
-                            child: Icon(Icons.settings),
-                          ),
-                        ],
+                      child: Image.asset(
+                        'icon/wrapper.png',
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.7),
-                          //spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: Offset(0.0, 5.0),
+                  InkWell(
+                    child: Container(
+                      height: 60,
+                      width: 60,
+                      child: Card(
+                        elevation: 10,
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                      ]),
-                  height: 60,
-                  width: 330,
-                  child: Card(
-                    // elevation: 10,
-                    color: Colors.white60,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                        child: Icon(Icons.add),
+                      ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: const [
-                          Text("DJ & Music"),
-                          Padding(
-                            padding: EdgeInsets.only(left: 200),
-                            child: Icon(Icons.settings),
+                    onTap: () {
+                      showDialogFunc(context, titletext);
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 50, 8.0, 8.0),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.7),
+                            //spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0.0, 5.0),
                           ),
-                        ],
+                        ]),
+                    height: 60,
+                    width: MediaQuery.of(context).size.width / 1.1,
+                    child: Card(
+                      //elevation: 10,
+                      color: Colors.white60,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: const [
+                            Text("Dresses"),
+                            Padding(
+                              padding: EdgeInsets.only(left: 220),
+                              child: Icon(Icons.settings),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.7),
-                          //spreadRadius: 1,
-                          blurRadius: 7,
-                          offset: Offset(0.0, 5.0),
-                        ),
-                      ]),
-                  height: 60,
-                  width: 330,
-                  child: Card(
-                    //elevation: 10,
-                    color: Colors.white60,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Row(
-                        children: const [
-                          Text("Hotel"),
-                          Padding(
-                            padding: EdgeInsets.only(left: 235),
-                            child: Icon(Icons.settings),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.7),
+                            //spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0.0, 5.0),
                           ),
-                        ],
+                        ]),
+                    height: 60,
+                    width: MediaQuery.of(context).size.width / 1.1,
+                    child: Card(
+                      // elevation: 10,
+                      color: Colors.white60,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: const [
+                            Text("DJ & Music"),
+                            Padding(
+                              padding: EdgeInsets.only(left: 200),
+                              child: Icon(Icons.settings),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.7),
+                            //spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0.0, 5.0),
+                          ),
+                        ]),
+                    height: 60,
+                    width: MediaQuery.of(context).size.width / 1.1,
+                    child: Card(
+                      //elevation: 10,
+                      color: Colors.white60,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: const [
+                            Text("Hotel"),
+                            Padding(
+                              padding: EdgeInsets.only(left: 235),
+                              child: Icon(Icons.settings),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         //type: BottomNavigationBarType.fixed,

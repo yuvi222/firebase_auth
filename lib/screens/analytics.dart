@@ -68,35 +68,43 @@ class _AnalyticsState extends State<Analytics> {
                   height: 150,
                   width: 340,
                   child: Card(
-                    color: Colors.green,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                     elevation: 10,
-                    child: Column(
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: ListTile(
-                            //leading: Icon(Icons.person, size: 40, color: Colors.blue),
-                            title: Text(
-                              "Total Bookings",
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("icon/img_4.png"),
+                          fit: BoxFit.contain,
+                          //alignment: Alignment.topCenter,
+                        ),
+                      ),
+                      child: Column(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: ListTile(
+                              //leading: Icon(Icons.person, size: 40, color: Colors.blue),
+                              title: Text(
+                                "Total Bookings",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              subtitle: Text(
+                                '26 Bookings',
+                                style: TextStyle(
+                                    //fontWeight: FontWeight.w700,
+                                    fontSize: 15,
+                                    color: Colors.white),
                               ),
                             ),
-                            subtitle: Text(
-                              '26 Bookings',
-                              style: TextStyle(
-                                  //fontWeight: FontWeight.w700,
-                                  fontSize: 15,
-                                  color: Colors.white),
-                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

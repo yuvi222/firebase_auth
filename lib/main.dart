@@ -1,9 +1,11 @@
 import 'package:auth_app/screens/analytics.dart';
 import 'package:auth_app/screens/dashboard.dart';
+import 'package:auth_app/screens/edit_payments.dart';
 import 'package:auth_app/screens/featured.dart';
 import 'package:auth_app/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:auth_app/screens/payments.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const Analytics(),
+      home: const Payments(),
     );
   }
 }
