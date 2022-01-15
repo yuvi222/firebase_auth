@@ -3,6 +3,7 @@ import 'package:auth_app/screens/dashboard.dart';
 import 'package:auth_app/screens/edit_payments.dart';
 import 'package:auth_app/screens/featured.dart';
 import 'package:auth_app/screens/login_screen.dart';
+import 'package:auth_app/screens/your_orders.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:auth_app/screens/payments.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const Payments(),
+      home: const YourOrders(),
     );
   }
 }
