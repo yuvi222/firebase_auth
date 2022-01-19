@@ -374,7 +374,7 @@ class _YourOrdersState extends State<YourOrders> {
                   Text(
                     "Check out",
                     style: TextStyle(fontSize: 18, color: Colors.white),
-                  )
+                  ),
                 ],
               ),
             ),
